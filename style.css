@@ -1,0 +1,17 @@
+h1 {
+  color: gold;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+h2, h3 {
+  color: burlywood;
+  font-style: italic;
+}
+p {
+  color: whitesmoke;
+  font-style: normal;
+}
+.container {
+  background-color: slategray;
+}
