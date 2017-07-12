@@ -69,4 +69,4 @@ while (counter < 4 && guess != 7) {
     counter ++;
   }
 }
-console.log('counter:', counter);
+console.log('counter:', counter);1
