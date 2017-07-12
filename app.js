@@ -41,8 +41,8 @@ if (question4.toUpperCase() === 'YES' || question4.toUpperCase() === 'Y') {
 console.log('The user said ' + question4);
 
 var question5 = prompt('Did you enjoy the quiz?');
-if (question5.toUpperCase() === 'YES' || question5.toUpperCase() === 'Y' {
-  alert('Yes it was an awesome quiz!');
+if (question5.toUpperCase() === 'YES' || question5.toUpperCase() === 'Y') {
+  alert('it was an awesome quiz!');
 } else if (question5.toUpperCase() == 'NO' || question5.toUpperCase() == 'N') {
   alert('You know it was awesome!');
 } else {
