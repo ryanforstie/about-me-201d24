@@ -55,6 +55,7 @@ if (army === 'YES' || army === 'Y') {
 }
 console.log('The user response was ' + army);
 
+// Question 6
 var counter = 0;
 
 while (counter < 4 && guess != 7) {
@@ -69,4 +70,12 @@ while (counter < 4 && guess != 7) {
     counter ++;
   }
 }
-console.log('counter:', counter);1
+console.log('counter:', counter);
+
+// Question 7
+var stateLived = ['Minnesota', 'Oregan', 'Wyoming', 'California', 'Kansas', 'Utah', 'Nevada' ];
+var counter = 0;
+
+while (counter < 6 && stateLived != 'Minnesota') {
+  var stateLived = prompt('What state have I lived in besides Washington?')
+}
