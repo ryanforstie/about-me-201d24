@@ -15,3 +15,10 @@ p {
 .container {
   background-color: slategray;
 }
+
+div {
+    width: 1000;
+    height: 600px;
+    background-color: slategray;
+    box-shadow: 10px 10px 5px #888888;
+}
