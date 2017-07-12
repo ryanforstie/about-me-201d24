@@ -1,5 +1,4 @@
 'use strict';
-
 var question1 = prompt('Are you ready to play an awesome game?');
 if (question1.toUpperCase() === 'YES' || question1.toUpperCase() === 'Y') {
   alert('Lets go!');
