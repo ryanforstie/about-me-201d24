@@ -58,24 +58,42 @@ console.log('The user response was ' + army);
 // Question 6
 var counter = 0;
 
-while (counter < 4 && guess != 7) {
+while (counter < 4) {
   var guess = prompt('What is my favorite number 1-20?');
-  if (parseInt(guess) === 7) {
-    alert('Good!');
-  } else if (parseInt(guess) > 7) {
+  if (parseInt(guess) > 7) {
     alert('High');
-    counter += 1;
+    counter++;
   } else if (parseInt(guess) < 7) {
     alert('Low');
-    counter ++;
+    counter++;
+  }
+  else if (parseInt(guess) == 7) {
+    alert('Good!');
+    break;
+  }
+  if (counter === 4) {
+    alert('Your out of guesses');
   }
 }
-console.log('counter:', counter);
 
 // Question 7
-var stateLived = ['Minnesota', 'Oregan', 'Wyoming', 'California', 'Kansas', 'Utah', 'Nevada' ];
-var counter = 0;
+var fruit = ['apple', 'bananna', 'orange', 'mango'];
+var numGuess = 6;
 
-while (counter < 6 && stateLived != 'Minnesota') {
-  var stateLived = prompt('What state have I lived in besides Washington?')
+while(numGuess > 0) {
+  var userguess = prompt('What is my favorite fruits?').toLowerCase();
+  for (var i = 0; i < fruit.length; i++) {
+    if(userguess === fruit[i]) {
+      alert('Good');
+      numGuess = -1;
+      break;
+    }
+  }
+  if(numGuess > 0) {
+    numGuess--;
+    alert('keep trying ' + numGuess + ' tries left');
+  }
+  if (numGuess === 0) {
+    alert('Out of guesses');
+  }
 }
