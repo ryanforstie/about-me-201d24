@@ -97,3 +97,4 @@ while(numGuess > 0) {
     alert('Out of guesses');
   }
 }
+//end of js
