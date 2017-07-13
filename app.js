@@ -1,9 +1,11 @@
 'use strict';
+var numCorrect = [];
 
 var sports = prompt('Lets play an awesome game about me, do I like sports?').toUpperCase();
 
 if (sports === 'YES' || sports === 'Y') {
   alert('Correct! I like pretty much all sports.');
+  numCorrect.push (1);
 } else if (sports === 'NO' || sports === 'N') {
   alert('Wrong, sports are fun!');
 } else {
@@ -15,6 +17,7 @@ var state = prompt('Was I from Arizona?').toUpperCase();
 
 if (state === 'YES' || state === 'Y') {
   alert('Good job!');
+  numCorrect.push (1);
 } else if (state === 'NO' || state === 'N') {
   alert('Wrong! I grew up in Cave Creek, Arizona.');
 } else {
@@ -28,6 +31,7 @@ if (age === 'YES' || age === 'Y') {
   alert('Wrong, you should know I am 27!');
 } else if (age === 'NO' || age === 'N') {
   alert('Right, your awesome!');
+  numCorrect.push (1);
 } else {
   alert('Invaild response');
 }
@@ -37,6 +41,7 @@ var cool = prompt('I\'m I the coolest?').toUpperCase();
 
 if (cool === 'YES' || cool === 'Y') {
   alert('Of course you know that!');
+  numCorrect.push (1);
 } else if (cool === 'NO' || cool === 'N') {
   alert('Sorry, that is incorrect!');
 } else {
@@ -48,8 +53,9 @@ var army = prompt('Was I in the Army?').toUpperCase();
 
 if (army === 'YES' || army === 'Y') {
   alert('Correct I served over 5 years in the Army.');
+  numCorrect.push (1);
 } else if (army === 'NO' || army === 'N') {
-  alert('Wrong, can\t you tell.');
+  alert('Wrong, can\'t you tell.');
 } else {
   alert('Invaild response');
 }
@@ -69,10 +75,13 @@ while (counter < 4) {
   }
   else if (parseInt(guess) == 7) {
     alert('Good!');
+    numCorrect.push (1);
     break;
   }
-  if (counter === 4) {
+  else if (counter === 4) {
     alert('Your out of guesses');
+  } else {
+    alert('Please provide a integer');
   }
 }
 
@@ -85,6 +94,7 @@ while(numGuess > 0) {
   for (var i = 0; i < fruit.length; i++) {
     if(userguess === fruit[i]) {
       alert('Good');
+      numCorrect.push (1);
       numGuess = -1;
       break;
     }
@@ -97,4 +107,6 @@ while(numGuess > 0) {
     alert('Out of guesses');
   }
 }
+
+alert(numCorrect.length + ' out of 10 correct!');
 //end of js
