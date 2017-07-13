@@ -1,6 +1,8 @@
 'use strict';
+// add up answers correct
 var numCorrect = [];
 
+// Question 1
 var sports = prompt('Lets play an awesome game about me, do I like sports?').toUpperCase();
 
 if (sports === 'YES' || sports === 'Y') {
@@ -11,8 +13,9 @@ if (sports === 'YES' || sports === 'Y') {
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + sports);
+console.log('The user said ' + sports + ' to sports question');
 
+//Question 2
 var state = prompt('Was I from Arizona?').toUpperCase();
 
 if (state === 'YES' || state === 'Y') {
@@ -23,8 +26,9 @@ if (state === 'YES' || state === 'Y') {
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + state);
+console.log('The user said ' + state + ' concering if I lived in AZ');
 
+//Question 3
 var age = prompt('I\'m I younger than 26?').toUpperCase();
 
 if (age === 'YES' || age === 'Y') {
@@ -35,8 +39,9 @@ if (age === 'YES' || age === 'Y') {
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + age);
+console.log('The user said ' + age + ' on age question');
 
+//Question 4
 var cool = prompt('I\'m I the coolest?').toUpperCase();
 
 if (cool === 'YES' || cool === 'Y') {
@@ -47,8 +52,9 @@ if (cool === 'YES' || cool === 'Y') {
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + cool);
+console.log('The user said ' + ' on if I was cool');
 
+//Question 5
 var army = prompt('Was I in the Army?').toUpperCase();
 
 if (army === 'YES' || army === 'Y') {
@@ -59,7 +65,7 @@ if (army === 'YES' || army === 'Y') {
 } else {
   alert('Invaild response');
 }
-console.log('The user response was ' + army);
+console.log('The user response was ' + army + ' on if I was in the army');
 
 // Question 6
 var counter = 0;
@@ -67,14 +73,14 @@ var counter = 0;
 while (counter < 4) {
   var guess = prompt('What is my favorite number 1-20?');
   if (parseInt(guess) > 7) {
-    alert('High');
+    alert('Too high');
     counter++;
   } else if (parseInt(guess) < 7) {
-    alert('Low');
+    alert('Too low');
     counter++;
   }
   else if (parseInt(guess) == 7) {
-    alert('Good!');
+    alert('Good guess!');
     numCorrect.push (1);
     break;
   }
@@ -84,6 +90,7 @@ while (counter < 4) {
     alert('Please provide a integer');
   }
 }
+console.log(' The user played my number guessing game');
 
 // Question 7
 var fruit = ['apple', 'bananna', 'orange', 'mango'];
@@ -93,7 +100,7 @@ while(numGuess > 0) {
   var userguess = prompt('What is my favorite fruits?').toLowerCase();
   for (var i = 0; i < fruit.length; i++) {
     if(userguess === fruit[i]) {
-      alert('Good');
+      alert('Good guess!');
       numCorrect.push (1);
       numGuess = -1;
       break;
@@ -101,12 +108,13 @@ while(numGuess > 0) {
   }
   if(numGuess > 0) {
     numGuess--;
-    alert('keep trying ' + numGuess + ' tries left');
+    alert('Keep trying ' + numGuess + ' tries left');
   }
   if (numGuess === 0) {
     alert('Out of guesses');
   }
 }
+console.log('The user played my favorite fruit guessing game');
 
 alert(numCorrect.length + ' out of 10 correct!');
 //end of js
