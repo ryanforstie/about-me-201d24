@@ -1,50 +1,100 @@
 'use strict';
-var question1 = prompt('Are you ready to play an awesome game?');
-if (question1.toUpperCase() === 'YES' || question1.toUpperCase() === 'Y') {
-  alert('Lets go!');
-} else if (question1.toUpperCase() == 'NO' || question1.toUpperCase() == 'N') {
-  alert('Too bad you get to play anyway!');
+
+var sports = prompt('Lets play an awesome game about me, do I like sports?').toUpperCase();
+
+if (sports === 'YES' || sports === 'Y') {
+  alert('Correct! I like pretty much all sports.');
+} else if (sports === 'NO' || sports === 'N') {
+  alert('Wrong, sports are fun!');
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + question1);
+console.log('The user said ' + sports);
 
-var question2 = prompt('Im I from Arizona?');
-if (question2.toUpperCase() === 'YES' || question2.toUpperCase() === 'Y') {
+var state = prompt('Was I from Arizona?').toUpperCase();
+
+if (state === 'YES' || state === 'Y') {
   alert('Good job!');
-} else if (question2.toUpperCase() == 'NO' || question2.toUpperCase() == 'N') {
-  alert('Wrong!');
+} else if (state === 'NO' || state === 'N') {
+  alert('Wrong! I grew up in Cave Creek, Arizona.');
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + question2);
+console.log('The user said ' + state);
 
-var question3 = prompt('Im I younger than 26?');
-if (question3.toUpperCase() === 'YES' || question3.toUpperCase() === 'Y') {
-  alert('Wrong, you should know this!');
-} else if (question3.toUpperCase() == 'NO' || question3.toUpperCase() == 'N') {
+var age = prompt('I\'m I younger than 26?').toUpperCase();
+
+if (age === 'YES' || age === 'Y') {
+  alert('Wrong, you should know I am 27!');
+} else if (age === 'NO' || age === 'N') {
   alert('Right, your awesome!');
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + question3);
+console.log('The user said ' + age);
 
-var question4 = prompt('Im I the coolest?');
-if (question4.toUpperCase() === 'YES' || question4.toUpperCase() === 'Y') {
+var cool = prompt('I\'m I the coolest?').toUpperCase();
+
+if (cool === 'YES' || cool === 'Y') {
   alert('Of course you know that!');
-} else if (question4.toUpperCase() == 'NO' || question4.toUpperCase() == 'N') {
+} else if (cool === 'NO' || cool === 'N') {
   alert('Sorry, that is incorrect!');
 } else {
   alert('Invaild response');
 }
-console.log('The user said ' + question4);
+console.log('The user said ' + cool);
 
-var question5 = prompt('Did you enjoy the quiz?');
-if (question5.toUpperCase() === 'YES' || question5.toUpperCase() === 'Y') {
-  alert('it was an awesome quiz!');
-} else if (question5.toUpperCase() == 'NO' || question5.toUpperCase() == 'N') {
-  alert('You know it was awesome!');
+var army = prompt('Was I in the Army?').toUpperCase();
+
+if (army === 'YES' || army === 'Y') {
+  alert('Correct I served over 5 years in the Army.');
+} else if (army === 'NO' || army === 'N') {
+  alert('Wrong, can\t you tell.');
 } else {
   alert('Invaild response');
 }
-console.log(question5 + ' user said it was his favorite quiz');
+console.log('The user response was ' + army);
+
+// Question 6
+var counter = 0;
+
+while (counter < 4) {
+  var guess = prompt('What is my favorite number 1-20?');
+  if (parseInt(guess) > 7) {
+    alert('High');
+    counter++;
+  } else if (parseInt(guess) < 7) {
+    alert('Low');
+    counter++;
+  }
+  else if (parseInt(guess) == 7) {
+    alert('Good!');
+    break;
+  }
+  if (counter === 4) {
+    alert('Your out of guesses');
+  }
+}
+
+// Question 7
+var fruit = ['apple', 'bananna', 'orange', 'mango'];
+var numGuess = 6;
+
+while(numGuess > 0) {
+  var userguess = prompt('What is my favorite fruits?').toLowerCase();
+  for (var i = 0; i < fruit.length; i++) {
+    if(userguess === fruit[i]) {
+      alert('Good');
+      numGuess = -1;
+      break;
+    }
+  }
+  if(numGuess > 0) {
+    numGuess--;
+    alert('keep trying ' + numGuess + ' tries left');
+  }
+  if (numGuess === 0) {
+    alert('Out of guesses');
+  }
+}
+//end of js
