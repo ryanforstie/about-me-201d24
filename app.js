@@ -40,6 +40,70 @@ function firstFive() {
 }
 
 firstFive();
+
+// Question 6
+function question6() {
+  var counter = 0;
+
+  while (counter <= 4) {
+    if (counter === 4) {
+      alert('Your out of guesses');
+      break;
+    }
+    var guess = prompt('What is my favorite number 1-20?');
+    if (parseInt(guess) > 7) {
+      alert('Too high');
+      counter++;
+    } else if (parseInt(guess) < 7) {
+      alert('Too low');
+      counter++;
+    }
+    else if (parseInt(guess) === 7) {
+      alert('Good guess!');
+      numCorrect.push(1);
+      break;
+    } else {
+      alert('Please provide a integer');
+    }
+  }
+  console.log(' The user played my number guessing game');
+}
+
+question6();
+
+// Question 7
+function question7() {
+  var fruit = ['apple', 'bananna', 'orange', 'mango'];
+  var numGuess = 6;
+
+  while(numGuess > 0) {
+    if (numGuess === 0) {
+      alert('Out of guesses');
+      break;
+    }
+    var userguess = prompt('What is my favorite fruits?').toLowerCase();
+    for (var i = 0; i < fruit.length; i++) {
+      if(userguess === fruit[i]) {
+        alert('Good guess!');
+        numCorrect.push (1);
+        numGuess = -1;
+        break;
+      }
+    }
+    if(numGuess > 0) {
+      numGuess--;
+      alert('You have ' + numGuess + ' tries left');
+    }
+  }
+  console.log('The user played my favorite fruit guessing game');
+
+  alert(numCorrect.length + ' out of 7 correct!');
+}
+
+question7();
+//end of js
+
+
 //
 // //Question 2
 // function question2() {
@@ -108,65 +172,3 @@ firstFive();
 // }
 //
 // question5();
-
-// Question 6
-function question6() {
-  var counter = 0;
-
-  while (counter <= 4) {
-    if (counter === 4) {
-      alert('Your out of guesses');
-      break;
-    }
-    var guess = prompt('What is my favorite number 1-20?');
-    if (parseInt(guess) > 7) {
-      alert('Too high');
-      counter++;
-    } else if (parseInt(guess) < 7) {
-      alert('Too low');
-      counter++;
-    }
-    else if (parseInt(guess) == 7) {
-      alert('Good guess!');
-      numCorrect.push (1);
-      break;
-    } else {
-      alert('Please provide a integer');
-    }
-  }
-  console.log(' The user played my number guessing game');
-}
-
-question6();
-
-// Question 7
-function question7() {
-  var fruit = ['apple', 'bananna', 'orange', 'mango'];
-  var numGuess = 6;
-
-  while(numGuess > 0) {
-    if (numGuess === 0) {
-      alert('Out of guesses');
-      break;
-    }
-    var userguess = prompt('What is my favorite fruits?').toLowerCase();
-    for (var i = 0; i < fruit.length; i++) {
-      if(userguess === fruit[i]) {
-        alert('Good guess!');
-        numCorrect.push (1);
-        numGuess = -1;
-        break;
-      }
-    }
-    if(numGuess > 0) {
-      numGuess--;
-      alert('You have ' + numGuess + ' tries left');
-    }
-  }
-  console.log('The user played my favorite fruit guessing game');
-
-  alert(numCorrect.length + ' out of 7 correct!');
-}
-
-question7();
-//end of js
